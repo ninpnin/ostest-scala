@@ -6,7 +6,7 @@ object ostest extends ScalaModule {
   //def logLevel = NativeLogLevel.Info // optional
   def releaseMode = ReleaseMode.ReleaseFull // optional
   def ivyDeps = Agg(
-    ivy"com.lihaoyi::os-lib:0.8.0"
+    ivy"com.lihaoyi::os-lib::0.8.0"
   )
 }
 
@@ -14,9 +14,8 @@ object ostest_native extends ScalaNativeModule {
   def scalaNativeVersion = "0.4.2"
   def scalaVersion = "2.13.4"
   //def logLevel = NativeLogLevel.Info // optional
-  //def releaseMode = ReleaseMode.ReleaseFull // optional
+  def releaseMode = ReleaseMode.ReleaseFull // optional
   def ivyDeps = Agg(
     ivy"com.lihaoyi::os-lib::0.8.0"
   )
-  def nativeLinkStubs = T { false }
 }
